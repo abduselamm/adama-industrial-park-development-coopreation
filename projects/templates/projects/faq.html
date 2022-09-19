@@ -1,0 +1,147 @@
+{%  extends 'projects/main.html' %}
+
+{% block content %}
+{% load static %}
+<head>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+{% include 'projects/navbar.html'%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>FAQ </title>
+</head>
+
+<section class="cd-faq js-cd-faq container max-width-md margin-top-lg margin-bottom-lg">
+	<ul class="cd-faq__categories">
+		<li><a class="cd-faq__category cd-faq__category-selected truncate" href="#basics">Basics</a></li>
+		<li><a class="cd-faq__category truncate" href="#mobile">files and security</a></li>
+		<li><a class="cd-faq__category truncate" href="#account">Account</a></li>
+		<li><a class="cd-faq__category truncate" href="#payments">Payments</a></li>
+		<li><a class="cd-faq__category truncate" href="#privacy">Privacy</a></li>
+	</ul> <!-- cd-faq__categories -->
+
+	<div class="cd-faq__items">
+		<ul id="basics" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Basics</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I change my password?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+			<p>###</p>
+		</div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I sign up?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+			<p>###</p>
+		</div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="mobile" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>files and security</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I upload files from my phone or tablet?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+			<p>###</p>
+		</div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="account" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Account</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I change my password?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+			<p>###</p>
+		</div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I change my account settings?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+			<p>###</p>
+		</div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>I forgot my password. How do I reset it?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+			<p>###</p>
+		</div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="privacy" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Privacy</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Can I specify my own private account?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+			<p>###</p></div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>My documents are missing! How do I get them back?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+			<p>###</p></div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How can I access my project data?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+			<p>###</p>
+		</div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Who takes care of leasing?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+          <p>###</p> 
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+	
+				</div> <!-- cd-faq__content -->
+			</li>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+	</div> <!-- cd-faq__items -->
+
+	<a href="#0" class="cd-faq__close-panel text-replace">Close</a>
+  
+  <div class="cd-faq__overlay" aria-hidden="true"></div>
+</section> <!-- cd-faq -->
+<script src="{% static 'js/util.js' %}"></script> <!-- util functions included in the CodyHouse framework -->
+<script src="{% static 'js/main.js' %}"></script> 
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'projects/main.html' %}
+{% block content %} 
+   <br>
+{% include 'projects/owner_navbar.html'%}
+<head>
+   <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>    
+</head>
+     
+   <div class="row">
+      <div class="col-md-5">
+         <div class="card card-body">
+            <h5>Lease:</h5>
+            <hr>
+            <a class="btn btn-outline-info  btn-sm btn-block" href="">Update Lease</a>
+            <a class="btn btn-outline-danger  btn-sm btn-block" href="">Delete Lease</a>
+   
+         </div>
+      </div>
+   <br>
+   <div class="row">
+      <div class="col">
+         <div class="card card-body">
+            <form method="get">
+   
+             <button class="btn btn-primary" type="submit">Search</button>
+           </form>
+         </div>
+      </div>
+      
+   </div>
+   <br>
+   
+   <div class="row">
+      <div class="col-md">
+         <div class="card card-body">
+            <table class="table table-striped table-bordered table-sm">
+               <tr>
+                  <th><a class="btn btn-sm btn-info">Title Deeded Number</a></th>
+					 <th><a class="btn btn-sm btn-info">Date of Deliver</a></th>
+                     <th><a class="btn btn-sm btn-info">Site Plan</a></th>
+                     <th><a class="btn btn-sm btn-info">plan Agreemnet Date</a></th>
+                     <th><a class="btn btn-sm btn-info">permission of Building Date</a></th>
+                     <th><a class="btn btn-sm btn-info">Starting of Building</a></th>
+                     <th><a class="btn btn-sm btn-info">Finshing of Building</a></th>
+                     <th><a class="btn btn-sm btn-info">Nationality</a></th>
+                     <th><a class="btn btn-sm btn-info">Email</a></th>
+                     <th><a class="btn btn-sm btn-info">Phone Number</a></th>
+                     <th><a class="btn btn-sm btn-info">EIA</a></th>
+                     <th><a class="btn btn-sm btn-info">Lease agreement and other documents</a></th>
+               </tr>
+               {% for i in lease %}
+                  <tr>
+                     <td>{{i.Title_deeded_no}}</td>
+                     <td>{{i.Date_of_deliver}}</td>
+                     <td>{{i.Site_plan}}</td>
+                     <td>{{i.Plan_agreement_date}}</td>
+                     <td>{{i.permission_of_building_date}}</td>
+                     <td>{{i.Starting_of_Building}}</td>
+                     <td>{{i.finishing_of_building}}</td>
+                     <td>{{i.Nationality}}</td>
+                     <td>{{i.Email}}</td>
+                     <td>{{i.Phone_Number}}</td>
+                     <td>{{i.EIA}}</td>
+                     <td>{{i.Lease_agreement_and_other_documents}}</td>
+                  </tr>
+               {% endfor %}
+            </table>
+         </div>
+      </div>
+   </div>
+  {% endblock %}  

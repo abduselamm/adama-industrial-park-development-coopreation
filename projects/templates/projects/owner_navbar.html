@@ -1,0 +1,36 @@
+    
+    {% load static %}
+    <head>
+      <link rel="stylesheet"   
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+      <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <style>
+      .hello-msg{
+        font-size: 18px;
+        color: #fff;
+        margin-right: 20px;
+      }
+    </style>
+    <div class="">
+      
+    <nav class="navbar navbar-expand-lg bg-blue-500">
+      <img src="{% static 'images/logo1.jpg' %}" class="img-circle" alt="logo">
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarNavDropdown">
+         <ul class="navbar-nav">
+       </div>
+       {% if request.user.is_staff %}
+       <span ><a  class="hello-msg" href="{% url 'dashboard' %}"><button class="btn btn-info">Dashboard</button></a></span>
+       <span ><a  class="hello-msg" href="{% url 'projects' %}"><button class="btn btn-info">Projects</button> </a></span>
+       <span ><a  class="hello-msg" href="{% url 'lease' %}"><button class="btn btn-info">Lease</button> </a></span>
+       {% endif %}
+       <i class="glyphicon glyphicon-user"></i>   
+      <span class="hello-msg">Hello, {{request.user}}</span>
+      <span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+     
+     </nav>
+    </div>

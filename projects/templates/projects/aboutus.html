@@ -1,0 +1,85 @@
+
+
+{%  extends 'projects/main.html' %}
+
+{% block content %}
+
+{% load static %}
+<br>
+
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  {% include 'projects/navbar.html'%}
+</body>
+
+    <section class="p-7 bg-gray-300">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap items-center mt-10">
+          <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+            <div
+              class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
+            >
+              <i class="fas fa-user-friends text-xl"></i>
+            </div>
+            <h2 class="text-5xl font-bold text-white my-3">About Us</h2>
+            <h3 class="text-3xl mb-2 font-semibold leading-normal">
+              Working with us is a pleasure
+            </h3>
+            <p
+              class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
+            >የአብክመ ኢንዱስትሪ ፓርኮች ልማት ኮርፖሬሽን በመንግስት ልማት ድርጅት ማቋቋማያ አዋጅ መሰረት በክልሉ ም/ቤት በደንብ ቁጥር 143/2008 ዓ.ም መሰረት የሁለገብ ኢንዱስትሪ መንደሮችን፣ የተቀናጀ አግሮ-ኢንዱስትሪ ፓርኮችን፣ ኢንዱስትሪ ሼዶችን፣ እንዲሁም የክላስተር ማዕከላትን እንዲያስተዳደር በክልሉ መስተዳድር ምክር ቤት ተቋቁሞ በህዳር ወር 2008 ዓ.ም ስራ በመጀመር የክልሉን አምራች ኢንዱስትሪ ዘርፍ በመደገፍ በክልሉ የኢንዱስትሪ ልማት እንዲስፋፋና ከግብርና ወደ ኢንዱስትሪ የሚደረገውን ኢኮኖሚያዊ ሽግግር ለማፋጠን ለአምራች ኢንዱስትሪ ዘርፉ መሬት በማስተላለፍ፣ የመሰረተ ልማት የማልማትና የመሳሰሉትን ተግባራት ሲያከናውን ቆይቷል፡፡ 
+            </p>
+            <p
+              class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
+            >
+            ኮርፖሬሽኑ የተሠጠውን ተግባርና ኃላፊነት ተደራሽ በሆነ መንገድ ለመፈጸም እንዲያመች የኢንቨስትመንት ፍሰቱን ከግምት ውስጥ ያስገባ መዋቅራዊ አደረጃጀት በመፍጠር ስምንት ቅ/ጽ/ቤቶችን በመክፈት ስራውን እያከናወነ ሲሆን ደ/ብርሃን ቅ/ጽ/ቤትም ጥር 2009 ዓ.ም ተቋቁሞ ከመጋቢት 2009 ዓ.ም ጀምሮ ስራ በመጀመር እስከ ታህሳስ 2013 ዓ.ም መጨረሻ በተረከበው አራት ሁለገብ ኢንዱስትሪ መንደሮች ውስጥ 287 እምራች ኢንዱስትሪ ፕሮጀክቶችን፣ 2 ኢንዱስትሪ ሼዶችን እና 5 ክላስተር ማዕከላትን እያስተዳደረ ይገኛል፡፡   
+          </p>
+            <a
+              href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
+              class="font-bold text-gray-800 mt-8"
+              >በአማራ ኢንዱስትሪ ፓርኮች ልማት ኮርፖሬሽን
+              የደ/ብርሃን ቅ/ጽ/ቤት
+              </a
+            >
+          </div>
+          <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+            <div
+              class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blue-400"
+            >
+              <img
+                alt="..."
+                src="{% static 'images/park.jpg'%}"
+                class="w-full align-middle rounded-t-lg"
+              />
+              <blockquote class="relative p-8 mb-4">
+                <svg
+                  preserveAspectRatio="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 583 95"
+                  class="absolute left-0 w-full block"
+                  style="height: 95px; top: -94px"
+                >
+                  <polygon
+                    points="-30,95 583,95 583,65"
+                    class="text-pink-600 fill-current"
+                  ></polygon>
+                </svg>
+                <h4 class="text-xl font-bold text-white">	የቅ/ጽ/ቤት ተቋማዊ አጠቃላይ መረጃዎች</h4>
+                <p class="text-md font-light mt-2 text-white">
+                  ቅ/ጽ/ቤታችን በከተማ አስተዳደሩ የነበረው የመረጃ አያያዝ ስርዓት ላይ የታዩ ችግሮችን በማየት የተጓደሉ መረጃዎችን ማሟላት የመጀመሪያ ስራ አድርገን በመፈጸም ከሃርድ ኮፒ የመረጃ አያያዝ በተጨማሪ የተደራጀ የሶፍት ኮፒ የመረጃ አያያዝ ስርዓት በማደራጀት Access database and Geo database ስርዓት በመዘርጋትና የመረጃ ፍሰት እና አስተማማኝነት ለማስጠበቅ የኢንፎርሜሽን ደህንነት የውስጥ ፖሊሲ ጭምር በማዘጋጀት በኮርፖሬሽኑ የወረዱ የአገልግሎት አሰጣጥ ስታንዳርዶችን እንደ መርህ በመውሰድና የመረጃ አያያዝ ስርዓቱን በማዘመን የአገልግሎት አሰጣጥ ስርዓቱ ቀልጣፋ እንዲሆን በመስራት በተነፃፃሪ የተቀላጠፈ አገልግሎት እየሰጠ ሲሆን ወቅቱ ከሚጠይቀው የቴክኖሎጂ ዕድገት፣ ለደንበኞች ያለውን ምቹነት፣ እንዲሁም እየሰፋ የሚሄደውን የመረጃ ስርዓት ከግምት ውስጥ ያስገባና በአንድ ቋት የተቀናጀ የመረጃ ስርዓት አስፈለጊ መሆኑን አምኖበት ከደ/ብርሃን ዩኒቨርስቲ ጋር ባለን የጋራ መግባቢያ ሰነድ መሰረት ስራውን ለማከናወን ዕቅድ ተይዞ እንቅስቃሴ ውስጥ ለመግባት ስራዎች እየተሰሩ ይገኛሉ፡፡ በመሆኑም ይህንን የኢንፎርሜሽን ቴክኖሎጂ ፕሮጀክት ለማስፈጸም እንዲያስችል  ይህ የቢዝነስ ፍላጎት ሰነድ ተዘጋጅቶ ቀርቧል፡፡
+
+
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+
+
+{% endblock %}

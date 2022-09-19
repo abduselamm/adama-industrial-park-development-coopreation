@@ -1,0 +1,56 @@
+{% load static %}
+<div class="relative mx-5 w-2/3 md:w-10/12 my-4 h-[500px]">
+  <div class="slide relative">
+    <img
+      class="w-full h-[500px] object-cover"
+      src="{% static 'images/park.jpg' %}"
+    />
+  
+  </div>
+
+  <div class="slide relative">
+    <img
+      class="w-full h-[500px] object-cover"
+      src="{% static 'images/park.png' %}"
+    />
+    
+  </div>
+
+  <div class="slide relative">
+    <img
+      class="w-full h-[500px] object-cover"
+      src="{% static 'images/fabrique.jpg' %}"
+    />
+   
+  </div>
+
+  <!-- The previous button -->
+  <a
+    class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+    onclick="moveSlide(-1)"
+    >❮</a
+  >
+
+  <!-- The next button -->
+  <a
+    class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+    onclick="moveSlide(1)"
+    >❯</a
+  >
+
+  <br />
+  <div class="flex justify-center items-center space-x-5">
+    <div
+      class="dot w-4 h-4 rounded-full cursor-pointer"
+      onclick="currentSlide(1)"
+    ></div>
+    <div
+      class="dot w-4 h-4 rounded-full cursor-pointer"
+      onclick="currentSlide(2)"
+    ></div>
+    <div
+      class="dot w-4 h-4 rounded-full cursor-pointer"
+      onclick="currentSlide(3)"
+    ></div>
+  </div>
+</div>

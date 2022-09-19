@@ -1,0 +1,67 @@
+{%  extends 'projects/main.html' %}
+{% load static %}
+{% block content %}
+<head>
+	<link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
+</head>
+<div class="container">  
+	<h1>Vertical Form Example</h1>  
+	
+  <form method="POST" action="" style="width:300px">  
+	{% csrf_token %}
+	{% for i in project %}
+	<div class="form-group">  
+	  <label for="">Project name</label>  
+	  <input type="" class="form-control" id="" placeholder="Project_name">  
+	</div>  
+	<div class="form-group">  
+	  <label for="">cluster</label>  
+	  <input type="" class="form-control" id="" placeholder="cluster">  
+	</div>  
+	<div class="form-group">  
+		<label for="">Investment Capital</label>  
+		<input type="" class="form-control" id="" placeholder="capital">  
+	  </div>  
+	  <div class="form-group">  
+		<label for="">Job Creation</label>  
+		<input type="" class="form-control" id="" placeholder="Job Creation">  
+	  </div>  
+	  <div class="form-group">  
+		<label for="">Mayor Approval of land</label>  
+		<input type="" class="form-control" id="" placeholder="Mayor Approval of land">  
+	  </div>  
+	  <div class="form-group">  
+		<label for="">Industry Village</label>  
+		<input type="" class="form-control" id="" placeholder="Industry Village">  
+	  </div>  
+	  <div class="form-group">  
+		<label for="">UPIN Number</label>  
+		<input type="" class="form-control" id="" placeholder="UPIN Number">  
+	  </div>  
+	  <div class="form-group">  
+		<label for="">Block Number</label>  
+		<input type="" class="form-control" id="" placeholder="Block">  
+	  </div>  
+	  <div class="form-group">  
+		<label for="">Parcel Number</label>  
+		<input type="" class="form-control" id="" placeholder="Parcel">  
+	  </div>  
+	  <input type="submit" name="Submit">
+	  </form>
+</div>
+	</div>
+</div>
+
+<script src="../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+  <script src="../maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+{% endblock %}
+
+
+
+
+
+
+
+
+					 
+                     

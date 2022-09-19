@@ -1,0 +1,76 @@
+{% load static %}
+{% include 'projects/owner_navbar.html'%}
+<head>
+		<script src="https://cdn.tailwindcss.com"></script>
+</head>
+	<br>
+<div class="flex">
+	
+
+	{% include 'projects/owner_sidebar.html'%}
+	<div class="col-auto">
+		<div class="card card-body">
+			<img class="profile-pic" src="{{request.user.owner.profile_pic.url}}" height="150" width="150">
+			<h1></h1>
+			<h5></h5>
+			<hr>
+			<p>Email: {{user.email}}</p>
+			<p>Phone: {{user.phone}}</p>
+		</div>
+	
+</div>
+
+
+<br>
+<div class="row">
+	<div class="col">
+		<div class="card card-body">
+
+		</div>
+	</div>
+
+</div>
+<br>
+</div>
+<div class="col">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Project name</th>
+                     <th>Purpose</th>
+                     <th>cluster</th>
+                     <th>Investment Capital</th>
+                     <th>Job Creation</th>
+                     <th>Mayor Approval of land</th>
+                     <th>Recieved Land Meter square</th>
+                     <th>Industry Village</th>
+                     <th>UPIN Number</th>
+                     <th>Block Number</th>
+                     <th>Parcel Number</th>
+				</tr>
+
+				{% for a in owners %}
+
+				<tr>
+					<td>{{a.Project_name}}</td>
+                     <td>{{a.purpose}}</td>
+                     <td>{{a.cluster}}</td>
+                     <td>{{a.Investment_Capital}}</td>
+                     <td>{{a.Job_Creation}}</td>
+                     <td>{{a.Mayor_Approval_of_land}}</td>
+                     <td>{{a.Recieved_Land_Meter_square}}</td>
+                     <td>{{a.Industry_Village}}</td>
+                     <td>{{a.UPIN_Number}}</td>
+                     <td>{{a.Block_Number}}</td>
+                     <td>{{a.Parcel_Number}}</td>
+				</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+</div>
+
+</div>
+	

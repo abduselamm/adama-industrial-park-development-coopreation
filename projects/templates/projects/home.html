@@ -1,0 +1,185 @@
+{%  extends 'projects/main.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      
+      ::-webkit-scrollbar {
+        height: 10px;
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c2c1c1;
+      }
+      
+    </style>
+  </head>
+  <body>
+    {% include 'projects/navbar.html' %}
+    <!-- Implement the carousel -->
+    <section class="w-screen h-screen flex justify-around">
+      <div class="flex flex-col flex-grow h-auto items-center">
+        {% include 'projects/casousel.html' %}
+        <!-- In this below section flee free to add what every you want -->
+        <div class="flex w-full justify-around items-center">
+          <section class="shadow-md bg-white p-4">
+            <h1></h1>
+          </section>
+          <section class="shadow-md bg-white p-4">
+    <!-- i can write something here -->
+          </section>
+        </div>
+      </div>
+
+      <div
+        class="cusom-overflow w-[400px] h-auto overflow-y-scroll bg-gray-200"
+      >
+        <div class="w-full flex flex-col">
+          <h1 class="w-full bg-blue-400 p-3 text-white">QUICK LINKS</h1>
+          <a
+            href=""
+            class="cursor-pointer mx-3 hover:text-blue-400"
+            target="_blank"
+            >Downloadable docs</a
+          >
+          <a
+            href="https://www.bootstrapcdn.com"
+            class="cursor-pointer mx-3 hover:text-blue-400"
+            target="_blank"
+            >apply for job</a
+          >
+          <a
+            href="https://www.bootstrapcdn.com"
+            class="cursor-pointer mx-3 hover:text-blue-400"
+            target="_blank"
+            >Investment confrence</a
+          >
+          <a
+            href=""
+            class="cursor-pointer mx-3 hover:text-blue-400"
+            target="_blank"
+            >Downloadable docs</a
+          >
+          <a
+            href="https://www.bootstrapcdn.com"
+            class="cursor-pointer mx-3 hover:text-blue-400"
+            target="_blank"
+            >apply for job</a
+          >
+          <a
+            href="https://www.bootstrapcdn.com"
+            class="cursor-pointer mx-3 hover:text-blue-400"
+            target="_blank"
+            >Investment confrence</a
+          >
+        </div>
+        {% include 'projects/calander.html' %}
+        <!-- Calander ends here -->
+        <div class="w-full flex flex-col">
+          <h1 class="w-full bg-blue-400 p-3 text-white">ANNOUNCEMENT</h1>
+          <a
+            href=""
+            class="cursor-pointer mx-3 hover:text-blue-400"
+            target="_blank"
+            >News of the week</a
+          >
+          <a
+            href="https://www.bootstrapcdn.com"
+            class="cursor-pointer mx-3 hover:text-blue-400"
+            target="_blank"
+            >Dive into our village</a
+          >
+          <a
+            href="https://www.bootstrapcdn.com"
+            class="cursor-pointer mx-3 hover:text-blue-400"
+            target="_blank"
+            >Controlling the system</a
+          >
+        </div>
+        <div class="w-full flex flex-col my-3">
+          <h1 class="w-full bg-blue-400 p-3 text-white">our map</h1>
+          <div class="w-full flex overflow-x-scroll">
+            <image
+              src="https://assets-global.website-files.com/6050a76fa6a633d5d54ae714/609147088669907f652110b0_report-an-issue(about-maps).jpeg"
+              class="cursor-pointer object-cover mr-2"
+            />
+            <image
+              src="https://assets-global.website-files.com/6050a76fa6a633d5d54ae714/609147088669907f652110b0_report-an-issue(about-maps).jpeg"
+              class="cursor-pointer object-cover mx-3"
+            />
+            <image
+              src="https://assets-global.website-files.com/6050a76fa6a633d5d54ae714/609147088669907f652110b0_report-an-issue(about-maps).jpeg"
+              class="cursor-pointer object-cover ml-2"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- The dots -->
+    </section>
+
+    <!-- Javascript code -->
+    <script>
+      // set the default active slide to the first one
+      let slideIndex = 1;
+      showSlide(slideIndex);
+
+      // change slide with the prev/next button
+      function moveSlide(moveStep) {
+        showSlide((slideIndex += moveStep));
+      }
+
+      // change slide with the dots
+      function currentSlide(n) {
+        showSlide((slideIndex = n));
+      }
+
+      function showSlide(n) {
+        let i;
+        const slides = document.getElementsByClassName("slide");
+        const dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        // hide all slides
+        for (i = 0; i < slides.length; i++) {
+          slides[i].classList.add("hidden");
+        }
+
+        // remove active status from all dots
+        for (i = 0; i < dots.length; i++) {
+          dots[i].classList.remove("bg-yellow-500");
+          dots[i].classList.add("bg-green-600");
+        }
+
+        // show the active slide
+        slides[slideIndex - 1].classList.remove("hidden");
+
+        // highlight the active dot
+        dots[slideIndex - 1].classList.remove("bg-green-600");
+        dots[slideIndex - 1].classList.add("bg-yellow-500");
+      }
+    </script>
+  </body>
+</html>
+<footer>
+  Follow us &amp; get in touch.<br /><a href="https://www.facebook.com/adamaastu/" target="_blank" rel="noopener noreferrer"><img src="/images/Socialicons/facebook.png" alt="" /></a>&nbsp; <img src="/images/Socialicons/linkedin-icon.png" alt="" />&nbsp; <img src="/images/Socialicons/twitter.png" alt="" />&nbsp; <img src="/images/Socialicons/GooglePlusa.png" alt="" />&nbsp; <img src="/images/Socialicons/YouTube.png" alt="" />
+</footer>
+{% endblock %}

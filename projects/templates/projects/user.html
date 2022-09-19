@@ -1,0 +1,76 @@
+{% load static %}
+{% include 'projects/owner_navbar.html'%}
+<head>
+	
+		<script src="https://cdn.tailwindcss.com"></script>
+</head>
+	<br>
+<div class="flex"> 
+
+	{% include 'projects/owner_sidebar.html'%}
+	<div class="col-auto">
+		<div class="card card-body">
+			<img class="profile-pic" src="{{request.user.owner.profile_pic.url}}" height="150" width="150">
+			<h1></h1>
+			<h5></h5>
+			<hr>
+			<p>Email: {{user.email}}</p>
+			<p>Phone: {{user.phone}}</p>
+		</div>
+	
+</div>
+
+
+<br>
+<div class="row">
+	<div class="col">
+		<div class="card card-body">
+
+		</div>
+	</div>
+
+</div>
+<br>
+</div>
+<div class="col">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-striped table-bordered table-sm">
+				<tr>
+					<th><a class="btn btn-sm btn-info">Project name</a></th>
+                     <th><a class="btn btn-sm btn-info">Purpose</a></th>
+                     <th><a class="btn btn-sm btn-info">cluster</a></th>
+                     <th><a class="btn btn-sm btn-info">Investment Capital</a></th>
+                     <th><a class="btn btn-sm btn-info">Job Creation</a></th>
+                     <th><a class="btn btn-sm btn-info">Mayor Approval of land</a></th>
+                     <th><a class="btn btn-sm btn-info">Recieved Land Meter square</a></th>
+                     <th><a class="btn btn-sm btn-info">Industry Village</a></th>
+                     <th><a class="btn btn-sm btn-info">UPIN Number</a></th>
+                     <th><a class="btn btn-sm btn-info">Block Number</a></th>
+                     <th><a class="btn btn-sm btn-info">Parcel Number</a></th>
+				</tr>
+
+				{% for a in owners %}
+
+				<tr>
+					<td>{{a.Project_name}}</td>
+                     <td>{{a.purpose}}</td>
+                     <td>{{a.cluster}}</td>
+                     <td>{{a.Investment_Capital}}</td>
+                     <td>{{a.Job_Creation}}</td>
+                     <td>{{a.Mayor_Approval_of_land}}</td>
+                     <td>{{a.Recieved_Land_Meter_square}}</td>
+                     <td>{{a.Industry_Village}}</td>
+                     <td>{{a.UPIN_Number}}</td>
+                     <td>{{a.Block_Number}}</td>
+                     <td>{{a.Parcel_Number}}</td>
+				</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+</div>
+
+</div>
+	

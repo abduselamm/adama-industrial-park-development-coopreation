@@ -1,0 +1,66 @@
+{%  extends 'projects/main.html' %}
+
+{% block content %}
+
+
+<br>
+<head>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+	{%  include 'projects/owner_navbar.html' %}
+	{%  include 'projects/status.html' %}
+</body>
+
+<div class="row">
+	<div class="col-md-5">
+		<h5> <font color="lightblue" size="20">projects:</font></h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="{% url 'createproject' %}">Create project</a>
+			<table class="table table-sm">
+				<tr>
+					<th>Project owner</th>
+					<th>Project</th>
+				</tr>
+				{% for j in project %}
+				<tr>
+				
+					<td>{{j.Project_name}}</td>
+					<td>{{j.purpose}}</td>
+					<td><a class="btn btn-sm btn-info" href="{% url 'updateproject' j.id %}">Update Project</a></td>
+					<td><a class="btn btn-sm btn-danger" href="{% url 'deleteproject' j.id %}">Delete Project</a></td>
+				</tr>
+
+				{% endfor %} 
+			</table>
+		</div>
+	</div>
+	<h5> <font color="lightblue" size="22">leases:</font></h5>
+	<div class="col-md-5">
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="{% url 'createlease' %}">Create Lease</a>
+			<table class="table table-sm">
+				<tr>
+					<th>Lease owner</th>
+					<th>Date of deliver</th>
+				</tr>
+				{% for i in lease %}
+				   <tr>
+					  <td>{{i.lease}}</td>
+					  <td>{{i.Date_of_deliver}}</td>
+					  <td><a class="btn btn-sm btn-info" href="{% url 'updatelease' i.id %}">Update Lease</a></td>
+					  <td><a class="btn btn-sm btn-danger" href="{% url 'deletelease' i.id %}">Delete Lease</a></td>
+			
+				</tr>
+
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+
