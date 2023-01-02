@@ -1,0 +1,47 @@
+{% load static %}
+{% include 'projects/owner_navbar.html'%}
+<head>
+	
+		<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    .request{
+      font-size: 18px;
+      color: #fff;
+      margin-right: 20px;
+    }
+  </style>
+<nav class="navbar navbar-expand-lg bg-blue-500">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <span class="request">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Requests</span>
+     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+       <ul class="navbar-nav">
+     </div>
+</nav>
+
+<div class="row">
+	<div class="col-md-7">
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="{% url 'newrequest' %}">New Request</a>
+			<table class="table table-sm">
+				<tr>
+					<th>Project name</th>
+					<th>request date</th>
+                    <th>status</th>
+				</tr>
+				{% for j in requests %}
+				<tr>
+				
+					<td>{{j.projectname}}</td>
+					<td>{{j.date}}</td>
+					<td>{{j.status}}</td>
+					<td><a class="btn btn-sm btn-info" href="">Update Request</a></td>
+					<td><a class="btn btn-sm btn-danger" href="">Delete Request</a></td>
+				</tr>
+
+				{% endfor %} 
+			</table>
+		</div>
+

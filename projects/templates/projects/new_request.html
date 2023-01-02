@@ -1,0 +1,73 @@
+{%  extends 'projects/main.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+	<link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+</head>
+<h1 class="bt btn-info">New Request </h1>
+<a class="btn btn-warning" href="{% url 'request' %}"> &#8592; Back </a>
+<div class="row">
+	<div class="col-md-6">
+		<div class="card card-body">
+
+			<form action="" method="POST">
+				{% csrf_token %}
+				<div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+
+                   <span class="btn btn-info">project Name:</span> {{form.projectname}}
+                </div>
+                
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+
+                    <span class="btn btn-info">project cluster:</span>{{form.projectcluster}}
+                </div>
+                
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+
+                    <span class="btn btn-info">purpose:</span> {{form.purpose}}
+                </div>
+                
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+
+                    <span class="btn btn-info">Investment capital:</span> {{form.capital}}
+                </div>
+                
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+
+                    <span class="btn btn-info">job creation:</span>{{form.jobcreation}}
+                </div>
+                
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+
+                    <span class="btn btn-info">load your file</span> {{form.file}}
+                </div>
+                
+
+        <input class="btn btn-info" type="submit" name="Submit">
+			</form>
+
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

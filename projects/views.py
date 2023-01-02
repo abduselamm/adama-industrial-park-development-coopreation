@@ -22,9 +22,17 @@ def about(request):
     about = About.objects.all()
     return render(request,'projects/aboutus.html',{'about':about})
 
+def test(request):
+    return render(request,'projects/test.html',{'test':test})
+
 def faq(request):
     return render(request,'projects/faq.html')
-
+def contactUs(request):
+	return render(request,'projects/contact_us.html')
+def requestPage(request):
+	requests = Request.objects.all()
+	context = {'requests':requests}
+	return render(request,'projects/request.html',context)
 @unauthenticated_user
 def registerPage(request):
 	form = CreateUserForm()
@@ -191,3 +199,20 @@ def deleteLease(request, pk):
 
 	context = {'item':lease}
 	return render(request, 'projects/deletelease.html', context)
+
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['owner'])
+def newRequest(request):
+    form = RequestForm()
+    if request.method == 'POST':
+        form = RequestForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/request')
+
+    context = {'form':form}
+    return render(request,'projects/new_request.html',context)
+
+def ourServices(request):
+	return render(request,'projects/ourservices.html')

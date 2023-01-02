@@ -23,3 +23,7 @@ class CreateUserForm(UserCreationForm):
 	class Meta:
 		model = User
 		fields = ['username', 'email', 'password1', 'password2']
+class RequestForm(ModelForm):
+	class Meta:
+		model = Request
+		fields = ['projectname','projectcluster','purpose','capital','jobcreation','file']

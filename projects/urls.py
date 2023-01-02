@@ -15,10 +15,16 @@ urlpatterns=[
     path('lease/', views.lease,name='lease'),
     path('about/', views.about,name="about"),
     path('faq/', views.faq,name="faq"),
+    path('request/', views.requestPage,name="request"),
+    path('test/', views.test,name="test"),
+    path('contact/',views.contactUs,name="contact"),
     path('createproject/', views.createProject,name="createproject"),
+    path('newrequest/', views.newRequest,name="newrequest"),
     path('updateproject/<str:pk>/', views.updateProject,name="updateproject"),
     path('deleteproject/<str:pk>/', views.deleteProject,name="deleteproject"),
     path('createlease/', views.createLease,name="createlease"),
     path('updatelease/<str:pk>/', views.updateLease,name="updatelease"),
-    path('deletelease/<str:pk>/', views.deleteLease,name="deletelease")
+    path('deletelease/<str:pk>/', views.deleteLease,name="deletelease"),
+    path('ourservices', views.ourServices,name="ourservices"),
+    
 ]   

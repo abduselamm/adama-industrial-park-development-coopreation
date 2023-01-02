@@ -6,4 +6,5 @@ admin.site.register(Projects)
 admin.site.register(Lease)
 admin.site.register(Owner)
 admin.site.register(About)
+admin.site.register(Request)
 

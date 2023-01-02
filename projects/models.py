@@ -13,8 +13,23 @@ class Owner(models.Model):
     
     def __str__(self):
         return self.name
-
-
+class Request(models.Model):
+    cluster = (
+        ('agro-processing','agro-processing'),
+        ('wood and metals','wood and metals'),
+        ('pharmaciotical','pharmaciotical'),
+        ('plastic and chemical','plastic and chemical'),
+        ('textile and leather-products','textile and leather-products'),
+    )
+    user = models.ForeignKey(User,null=True,blank=True,on_delete=models.CASCADE)
+    projectname  = models.CharField(max_length=200, null=True)
+    projectcluster = models.CharField(max_length=200, null=True,choices=cluster)
+    purpose = models.CharField(max_length=200, null=True)
+    capital = models.CharField(max_length=200, null=True)
+    jobcreation = models.CharField(max_length=200, null=True)
+    file = models.FileField(null=True,blank=True)
+    date = models.DateTimeField(auto_now_add=True, null=True)
+    status = models.CharField(max_length=200,default='pending', null=True)
 class Lease(models.Model):
     STATUS = (
             ('HAVE', 'HAVE'),
